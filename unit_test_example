@@ -1,0 +1,11 @@
+import unittest
+from your_module import verify_email
+
+class TestEmailVerification(unittest.TestCase):
+
+    def test_verify_email(self):
+        response = verify_email("verification_code")
+        self.assertEqual(response["message"], "Email verified for code: verification_code")
+
+if __name__ == '__main__':
+    unittest.main()
